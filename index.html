@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perspective Generator</title>
+    <link rel="stylesheet" href="perspective.css">
+    <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Perspective Generator</h1>
+        <p>This generator helps you to make perspective grids by your eye level.<br>
+            You may add perspective grids on grids you already generated.<br>
+        The visible area of grid is width=1000, height=500 but, you may input other numbers like "-200", "3000".</p>
+        <form id="input_area">
+            <label for="el">Input your Eye Level(cm) : </label>
+            <input id ="el" type="text" placeholder="Visible Area : 0-500"><br>
+            <label for="xpoint">Which point on X axis would you like to start?(cm) : </label>
+            <input id ="xpoint" type="text" placeholder="Visible Area : 0-1000"><br>
+            <input type="button" onclick="generate_pers();" value="Generate">
+            <input type="button" onclick="clear_canvas();" value="Clear All">
+            <input type="button" onclick="export_img();" value="Export as a PNG">
+
+        </form>
+
+    <canvas id="canvas" width="1000" height="500">Your browser does not support Canvas.</canvas>
+    </main>
+<script src="perspective.js"></script>
+</body>
+</html>
