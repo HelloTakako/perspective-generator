@@ -2,6 +2,7 @@ canvas{
     background-color: #fff;
     margin: 20px auto;
     border:1px solid #ddd;
+    max-width:100%;
 }
 body{
     background-color: #ccc;
