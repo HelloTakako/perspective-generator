@@ -7,12 +7,28 @@
     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <ul>
+            <li><a href="#">Perspective Gen.</a></li>
+            <li><a href="search-images.html">Images Search</a></li>
+        </ul>
+    </header>
     <main>
         <h1>Perspective Generator</h1>
         <p>This generator helps you to make perspective grids by your eye level.<br>
             You may add perspective grids on grids you already generated.<br>
         The visible area of grid is width=1000, height=500 but, you may input other numbers like "-200", "3000".</p>
         <form id="input_area">
+            <label for="points">Kinds of perspective : </label><br/>
+            <input type="radio" name="points" value="point1">1-point perspective
+            <input type="radio" name="points" value="point2">2-point perspective
+            <input type="radio" name="points" value="point3">3-point perspective</br>
+
+            <label for="numOfLines">The number of lines : </label><br/>
+            <input type="range" min="2" max="20" value="10" id="numOfLines">
+            <span id="numOfLinesShow"></span><br/>
+            
+
             <label for="el">Input your Eye Level(cm) : </label>
             <input id ="el" type="text" placeholder="Visible Area : 0-500"><br>
             <label for="xpoint">Which point on X axis would you like to start?(cm) : </label>

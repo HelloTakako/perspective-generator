@@ -1,3 +1,15 @@
+// Get values
+var slider = document.getElementById("numOfLines");
+var output = document.getElementById("numOfLinesShow");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+// Canvas
+
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
