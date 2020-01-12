@@ -28,6 +28,7 @@ body{
 Header
 ---------------------*/
 header{
+    display: none; // temporarily hidden
     ul{
         display: flex;
         li{
@@ -48,7 +49,7 @@ canvas{
     background-color: #fff;
     margin: 20px auto;
     border:1px solid #ddd;
-    max-width:100%;
+    max-width:50%;
 }
 body{
     background-color: #ccc;
@@ -63,13 +64,13 @@ main{
     border-radius: 10px;
 }
 h1{
-    font-size: 4.5em;
+    font-size: 1.8rem;
     margin: 0 auto -30px;
     color: #48d54c;
     margin-bottom: 30px;
 }
 p{
-    font-size:0.8em;
+    font-size:0.8rem;
     color:#888;
 }
 form{

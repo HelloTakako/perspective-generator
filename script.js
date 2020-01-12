@@ -1,6 +1,9 @@
 // Get values
-var slider = document.getElementById("numOfLines");
-var output = document.getElementById("numOfLinesShow");
+const slider = document.getElementById("numOfLines");
+const output = document.getElementById("numOfLinesShow");
+
+
+// show value of total lines
 output.innerHTML = slider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
@@ -10,8 +13,8 @@ slider.oninput = function() {
 
 // Canvas
 
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
 //default grids
 

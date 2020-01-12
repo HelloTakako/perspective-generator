@@ -14,11 +14,10 @@
     </header>
     <main>
         <h1>Perspective Generator</h1>
-        <p>This generator helps you to make perspective grids by your eye level.<br>
-            You may add perspective grids on grids you already generated.<br>
-        The visible area of grid is width=1000, height=500 but, you may input other numbers like "-200", "3000".</p>
+
+        <canvas id="canvas" width="1000" height="500">Your browser does not support Canvas.</canvas>
+
         <form id="input_area">
-            <label for="points">Kinds of perspective : </label><br/>
             <input type="radio" name="points" value="point1">1-point perspective
             <input type="radio" name="points" value="point2">2-point perspective
             <input type="radio" name="points" value="point3">3-point perspective</br>
@@ -28,17 +27,23 @@
             <span id="numOfLinesShow"></span><br/>
             
 
-            <label for="el">Input your Eye Level(cm) : </label>
-            <input id ="el" type="text" placeholder="Visible Area : 0-500"><br>
-            <label for="xpoint">Which point on X axis would you like to start?(cm) : </label>
-            <input id ="xpoint" type="text" placeholder="Visible Area : 0-1000"><br>
+            <label for="el">Eye Level</label>
+            <input type="range" min="0" max="100" value="50" id="eyeLevel"><br/>
+
+            <label for="vp1">Vanishing Point 1</label>
+            <input type="range" min="-3000" max="3000" value="50" id="vp1"><br/>
+            <label for="vp1">Vanishing Point 2</label>
+            <input type="range" min="-3000" max="3000" value="50" id="vp2"><br/>
+            <label for="vp1">Vanishing Point 3</label>
+            <input type="range" min="-3000" max="3000" value="-100" id="vp3"><br/>
+
             <input type="button" onclick="generate_pers();" value="Generate">
             <input type="button" onclick="clear_canvas();" value="Clear All">
             <input type="button" onclick="export_img();" value="Export as a PNG">
 
         </form>
 
-    <canvas id="canvas" width="1000" height="500">Your browser does not support Canvas.</canvas>
+
     </main>
 <script src="script.js"></script>
 </body>
