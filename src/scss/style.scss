@@ -28,9 +28,13 @@ body{
 Header
 ---------------------*/
 header{
-    li{
-        a{
-            color:"#666";
+    ul{
+        display: flex;
+        li{
+            a{
+                color:"#666";
+                padding: 0 5px;
+            }
         }
     }
 }
