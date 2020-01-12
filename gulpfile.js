@@ -3,15 +3,18 @@ var gulp = require("gulp"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
     cssnano = require("cssnano"),
-    sourcemap = require("gulp-sourcemaps");
+    sourcemaps = require("gulp-sourcemaps");
 
 function style() {
   // place code for your default task here
   return (
       gulp
         .src("./src/scss/*.scss")
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .on("error", sass.logError)
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest("./public/css/"))
   );
 }

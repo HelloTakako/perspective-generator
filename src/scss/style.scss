@@ -1,3 +1,11 @@
+/*---------------------
+Fonts
+---------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/*---------------------
+General
+---------------------*/
 *{
 margin:0;
 padding:0;
@@ -5,6 +13,32 @@ padding:0;
 ul li{
     list-style: none;
 }
+img{
+    vertical-align: bottom;
+}
+html{
+    font-size:62.5%;
+}
+body{
+    font-family: "Lato", san-serif;
+    font-size: 1.6rem;
+}
+
+/*---------------------
+Header
+---------------------*/
+header{
+    li{
+        a{
+            color:"#666";
+        }
+    }
+}
+
+
+/*---------------------
+Canvas
+---------------------*/
 
 canvas{
     background-color: #fff;
@@ -25,10 +59,10 @@ main{
     border-radius: 10px;
 }
 h1{
-    font-family: 'Hi Melody', cursive;
     font-size: 4.5em;
     margin: 0 auto -30px;
     color: #48d54c;
+    margin-bottom: 30px;
 }
 p{
     font-size:0.8em;
