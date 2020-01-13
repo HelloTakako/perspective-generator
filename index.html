@@ -15,31 +15,49 @@
     <main>
         <h1>Perspective Generator</h1>
 
-        <canvas id="canvas" width="1000" height="500">Your browser does not support Canvas.</canvas>
-
+    <div class="canvas-preview">
+        <canvas id="canvas" width="320" height="180">Your browser does not support Canvas.</canvas>
+    </div>
+    
         <form id="input_area">
-            <input type="radio" name="points" value="point1">1-point perspective
-            <input type="radio" name="points" value="point2">2-point perspective
-            <input type="radio" name="points" value="point3">3-point perspective</br>
+            <fieldset id="orientation">
+                <input type="radio" name="orientation" value="horizontal" id="horizontal" checked>Horizontal
+                <input type="radio" name="orientation" value="vertical" id="vertical">Vertical<br/>
+            </fieldset>
 
-            <label for="numOfLines">The number of lines : </label><br/>
-            <input type="range" min="2" max="20" value="10" id="numOfLines">
-            <span id="numOfLinesShow"></span><br/>
-            
+            <fieldset>
+                <input type="radio" name="points" value="point1" id="vp1-select" checked>1-point perspective
+                <input type="radio" name="points" value="point2" id="vp2-select">2-point perspective
+                <input type="radio" name="points" value="point3" id="vp3-select">3-point perspective
+            </fieldset>
 
-            <label for="el">Eye Level</label>
-            <input type="range" min="0" max="100" value="50" id="eyeLevel"><br/>
+            <fieldset>
+                <label for="el">Eye Level</label>
+                <input type="range" min="0" max="100" value="50" id="eyeLevel">
+            </fieldset>
 
-            <label for="vp1">Vanishing Point 1</label>
-            <input type="range" min="-3000" max="3000" value="50" id="vp1"><br/>
-            <label for="vp1">Vanishing Point 2</label>
-            <input type="range" min="-3000" max="3000" value="50" id="vp2"><br/>
-            <label for="vp1">Vanishing Point 3</label>
-            <input type="range" min="-3000" max="3000" value="-100" id="vp3"><br/>
+            <fieldset>
+                <label for="vp1">Vanishing Point 1</label>
+                <input type="range" min="-3000" max="3000" value="50" id="vp1"><br/>
+                <label for="vp2">Vanishing Point 2</label>
+                <input type="range" min="-3000" max="3000" value="50" id="vp2" disabled><br/>
+                <label for="vp3">Vanishing Point 3(x coordinate)</label>
+                <input type="range" min="-3000" max="3000" value="-100" id="vp3-x" disabled><br/>
+                <label for="vp3">Vanishing Point 3(y coordinate)</label>
+                <input type="range" min="-3000" max="3000" value="-100" id="vp3-y" disabled>
+            </fieldset>
 
-            <input type="button" onclick="generate_pers();" value="Generate">
-            <input type="button" onclick="clear_canvas();" value="Clear All">
-            <input type="button" onclick="export_img();" value="Export as a PNG">
+            <fieldset>
+                <label for="numOfLines">The number of lines : </label><br/>
+                <input type="range" min="2" max="20" value="10" id="numOfLines">
+                <span id="numOfLinesShow"></span>
+            </fieldset>
+
+            <fieldset>
+                <input type="button" onclick="generate_pers();" value="Generate">
+                <input type="button" onclick="clear_canvas();" value="Clear All">
+                <input type="button" onclick="export_img();" value="Export as a PNG">
+            </fieldset>
 
         </form>
 

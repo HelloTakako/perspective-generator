@@ -1,3 +1,5 @@
+@import "./reset.scss";
+
 /*---------------------
 Fonts
 ---------------------*/
@@ -22,6 +24,7 @@ html{
 body{
     font-family: "Lato", san-serif;
     font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 /*---------------------
@@ -49,13 +52,16 @@ canvas{
     background-color: #fff;
     margin: 20px auto;
     border:1px solid #ddd;
-    max-width:50%;
 }
-body{
-    background-color: #ccc;
-    text-align: center;
-    line-height: 1.5;
+.canvas-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #ddd;
 }
+
+
 main{
     background-color: #fff;
     padding: 10px;
@@ -73,16 +79,18 @@ p{
     font-size:0.8rem;
     color:#888;
 }
+
+/*---------------------
+Canvas Settings
+---------------------*/
 form{
-    margin:60px auto 30px;
+    margin:0 auto 30px;
     line-height: 2;
-    font-size: 1.2em;
     font-weight: bold;
     color: #555;
 }
 input[onclick="generate_pers();"]{
     width: 300px;
-    font-size: 1em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -111,4 +119,7 @@ input[type="button"]{
 input[type="button"]:active,input[type="button"]:hover{
     opacity: 0.7;
     cursor:pointer;
+}
+input[disabled]{
+    opacity:0.5;
 }

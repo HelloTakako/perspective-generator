@@ -9,7 +9,7 @@ function style() {
   // place code for your default task here
   return (
       gulp
-        .src("./src/scss/*.scss")
+        .src("./src/scss/style.scss")
         .pipe(sourcemaps.init())
         .pipe(sass())
         .on("error", sass.logError)
