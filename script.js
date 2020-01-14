@@ -4,6 +4,8 @@ Canvas and the settings
 
 const canvasEyeLevel = document.getElementById('canvas-eye-level');
 const ctxEL = canvasEyeLevel.getContext('2d');
+const canvasGrid = document.getElementById('canvas-grid');
+const ctxGrid = canvasEyeLevel.getContext('2d');
 const canvasVp1 = document.getElementById('canvas-vp1');
 const ctxVp1 = canvasVp1.getContext('2d');
 const canvasVp2 = document.getElementById('canvas-vp2');
@@ -16,13 +18,28 @@ const ctxVp3 = canvasVp3.getContext('2d');
 const vertical = document.getElementById("vertical");
 const horizontal = document.getElementById("horizontal");
 
+function canvasVertical(canvas){
+    canvas.width = 180;
+    canvas.height = 320;
+}
+function canvasHorizontal(canvas){
+    canvas.width = 320;
+    canvas.height = 180;
+}
+
 vertical.addEventListener("change", function(){
-    canvasEyeLevel.width = 180;
-    canvasEyeLevel.height = 320;    
+    canvasVertical(canvasEyeLevel);
+    canvasVertical(canvasGrid);
+    canvasVertical(canvasVp1);
+    canvasVertical(canvasVp2);
+    canvasVertical(canvasVp3);   
 });
 horizontal.addEventListener("change", function(){
-    canvasEyeLevel.width = 320;
-    canvasEyeLevel.height = 180;
+    canvasHorizontal(canvasEyeLevel);
+    canvasHorizontal(canvasGrid);
+    canvasHorizontal(canvasVp1);
+    canvasHorizontal(canvasVp2);
+    canvasHorizontal(canvasVp3);   
 });
 
 
@@ -191,35 +208,41 @@ vp3.addEventListener("click", function(){
 });
 
 
-//default grids
+// grids
+function drawGrid(canvas, ctx) {
+    for (x=20; x < canvas.width; x += 20){
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, canvas.width);
+    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = "aqua";
+    ctx.stroke();
+    }
 
-// for (x=20; x < 320; x += 20){
-// ctx.beginPath();
-// ctx.moveTo(x, 0);
-// ctx.lineTo(x, 320);
-// ctx.lineWidth = 1;
-// ctx.strokeStyle = "#ddd";
-// ctx.stroke();
-// }
+    for (y=20; y < canvas.height; y += 20){
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(canvas.width, y);
+    ctx.lineWidth = 0.5;
+    ctx.strokeStyle = "aqua";
+    ctx.stroke();
+    }
+}
 
-// for (y=20; y < 180; y += 20){
-// ctx.beginPath();
-// ctx.moveTo(0, y);
-// ctx.lineTo(320, y);
-// ctx.lineWidth = 1;
-// ctx.strokeStyle = "#ddd";
-// ctx.stroke();
-// }
+const gridOn = document.getElementById("grid-on");
+const gridOff = document.getElementById("grid-off");
+
+gridOn.addEventListener("click", function(){drawGrid(canvasGrid, ctxGrid)});
+gridOff.addEventListener("click", function(){clearCanvas(canvasGrid, ctxGrid)});
 
 
 //clear_canvas
-function clear_canvas(){
-ctxEL.clearRect(0,0,320,180);
-ctxVp1.clearRect(0,0,320,180);
-ctxVp2.clearRect(0,0,320,180);
-ctxVp3.clearRect(0,0,320,180);
+function clearCanvas(canvas, ctx){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
+
+// export as PNG
 function export_img(){
     var img = canvasEyeLevel.toDataURL("image/png");
     document.write('<img src="'+img+'"/>');
