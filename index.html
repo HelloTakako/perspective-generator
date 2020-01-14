@@ -16,7 +16,10 @@
         <h1>Perspective Generator</h1>
 
     <div class="canvas-preview">
-        <canvas id="canvas" width="320" height="180">Your browser does not support Canvas.</canvas>
+        <canvas id="canvas-eye-level" width="320" height="180">Your browser does not support Canvas.</canvas>
+        <canvas id="canvas-vp1" width="320" height="180">Your browser does not support Canvas.</canvas>
+        <canvas id="canvas-vp2" width="320" height="180">Your browser does not support Canvas.</canvas>
+        <canvas id="canvas-vp3" width="320" height="180">Your browser does not support Canvas.</canvas>
     </div>
     
         <form id="input_area">
@@ -38,19 +41,22 @@
 
             <fieldset>
                 <label for="vp1">Vanishing Point 1</label>
-                <input type="range" min="-3000" max="3000" value="50" id="vp1"><br/>
+                <input type="range" min="-2500" max="2500" value="50" id="vp1"><br/>
                 <label for="vp2">Vanishing Point 2</label>
-                <input type="range" min="-3000" max="3000" value="50" id="vp2" disabled><br/>
-                <label for="vp3">Vanishing Point 3(x coordinate)</label>
-                <input type="range" min="-3000" max="3000" value="-100" id="vp3-x" disabled><br/>
-                <label for="vp3">Vanishing Point 3(y coordinate)</label>
-                <input type="range" min="-3000" max="3000" value="-100" id="vp3-y" disabled>
+                <input type="range" min="-2500" max="2500" value="50" id="vp2" disabled><br/>
+                <label for="vp3">Vanishing Point 3</label>
+                <input type="range" min="-2500" max="2500" value="-100" id="vp3" disabled>
+            </fieldset>
+
+            <fieldset id="grid">
+                <label for="grid">Grid</label>
+                <input type="radio" name="grid" value="grid-on" id="grid-on">On
+                <input type="radio" name="grid" value="grid-off" id="grid-off" checked>Off<br/>
             </fieldset>
 
             <fieldset>
                 <label for="numOfLines">The number of lines : </label><br/>
-                <input type="range" min="2" max="20" value="10" id="numOfLines">
-                <span id="numOfLinesShow"></span>
+                <input type="range" min="5" max="20" value="10" id="numOfLines">
             </fieldset>
 
             <fieldset>

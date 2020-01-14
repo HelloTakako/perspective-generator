@@ -26,6 +26,19 @@ body{
     font-size: 1.6rem;
     line-height: 1.5;
 }
+main{
+    background-color: #fff;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+h1{
+    font-size: 1.8rem;
+    margin: 0 auto -30px;
+    color: #48d54c;
+    margin-bottom: 30px;
+}
 
 /*---------------------
 Header
@@ -48,11 +61,6 @@ header{
 Canvas
 ---------------------*/
 
-canvas{
-    background-color: #fff;
-    margin: 20px auto;
-    border:1px solid #ddd;
-}
 .canvas-preview{
     display: flex;
     justify-content: center;
@@ -60,24 +68,14 @@ canvas{
     height: 400px;
     background-color: #ddd;
 }
-
-
-main{
+#canvas-eye-level{
     background-color: #fff;
-    padding: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
 }
-h1{
-    font-size: 1.8rem;
-    margin: 0 auto -30px;
-    color: #48d54c;
-    margin-bottom: 30px;
-}
-p{
-    font-size:0.8rem;
-    color:#888;
+canvas{
+    background-color: transparent;
+    margin: 20px auto;
+    border:1px solid #ddd;
+    position: absolute;
 }
 
 /*---------------------
