@@ -13,6 +13,15 @@ const ctxVp2 = canvasVp2.getContext('2d');
 const canvasVp3 = document.getElementById('canvas-vp3');
 const ctxVp3 = canvasVp3.getContext('2d');
 
+// Integers next to each slider
+const intEL = document.getElementById("eyeLevel-int");
+const intVp1 = document.getElementById("vp1-int");
+const intVp2 = document.getElementById("vp2-int");
+const intVp3 = document.getElementById("vp3-int");
+const intNoL = document.getElementById("numOfLines-int");
+
+
+
 // Preview, Vertical or Horizontal
 
 const vertical = document.getElementById("vertical");
@@ -48,6 +57,7 @@ horizontal.addEventListener("change", function(){
 
 const eyeLevel = document.getElementById("eyeLevel");
 eyeLevel.addEventListener("change", function(){
+    intEL.value = eyeLevel.value;
     let x = (eyeLevel.value / 100) * canvasEyeLevel.height;
     // draw eye level line on canvas preview
     ctxEL.clearRect(0,0,canvasEyeLevel.width,canvasEyeLevel.height);
@@ -64,10 +74,9 @@ eyeLevel.addEventListener("change", function(){
 
 const numOfLines = document.getElementById("numOfLines");
 // get numbers of lines
-// numOfLines.addEventListener("click", function(){
-//     const numOfLinesVal = numOfLines.value;
-//     console.log(numOfLinesVal);
-// })
+numOfLines.addEventListener("click", function(){
+    intNoL.value = numOfLines.value;
+})
 
 //------------------------
 //Vanishing points
@@ -130,14 +139,17 @@ const drawVP = function(ctx, vpEach,eyeLevel){
 };
 
 vp1.addEventListener("click", function(){
+    intVp1.value = vp1.value;
     drawVP(ctxVp1, vp1, eyeLevel);
 });
 
 vp2.addEventListener("click", function(){
+    intVp2.value = vp2.value;
     drawVP(ctxVp2, vp2, eyeLevel);
 });
 
 vp3.addEventListener("click", function(){
+    intVp3.value = vp3.value;
     const vp = vp3.value;
     const cwCenter = canvasEyeLevel.width / 2;
     ctxVp3.clearRect(0,0,canvasEyeLevel.width,canvasEyeLevel.height);
@@ -236,14 +248,24 @@ gridOn.addEventListener("click", function(){drawGrid(canvasGrid, ctxGrid)});
 gridOff.addEventListener("click", function(){clearCanvas(canvasGrid, ctxGrid)});
 
 
-//clear_canvas
+//clear_canvas / clear all button
 function clearCanvas(canvas, ctx){
     ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
+const clearAllButton = document.getElementById("clear-all-button");
+clearAllButton.addEventListener("click", function(){
+    clearCanvas(canvasEyeLevel, ctxEL);
+    clearCanvas(canvasGrid, ctxGrid);
+    clearCanvas(canvasVp1, ctxVp1);
+    clearCanvas(canvasVp2, ctxVp2);
+    clearCanvas(canvasVp3, ctxVp3);
+})
 
 // export as PNG
+
 function export_img(){
-    var img = canvasEyeLevel.toDataURL("image/png");
+    const exportImgArea = document.getElementById("canvas-preview");
+    var img = exportImgArea.toDataURL("image/png");
     document.write('<img src="'+img+'"/>');
 }
