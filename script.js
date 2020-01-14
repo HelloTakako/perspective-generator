@@ -244,8 +244,14 @@ function drawGrid(canvas, ctx) {
 const gridOn = document.getElementById("grid-on");
 const gridOff = document.getElementById("grid-off");
 
-gridOn.addEventListener("click", function(){drawGrid(canvasGrid, ctxGrid)});
-gridOff.addEventListener("click", function(){clearCanvas(canvasGrid, ctxGrid)});
+gridOn.addEventListener("click", function(){
+    drawGrid(canvasGrid, ctxGrid);
+    gridOn.checked = true;
+});
+gridOff.addEventListener("click", function(){
+    clearCanvas(canvasGrid, ctxGrid);
+    gridOn.checked = false;
+});
 
 
 //clear_canvas / clear all button
@@ -265,7 +271,11 @@ clearAllButton.addEventListener("click", function(){
 // export as PNG
 
 function export_img(){
-    const exportImgArea = document.getElementById("canvas-preview");
-    var img = exportImgArea.toDataURL("image/png");
-    document.write('<img src="'+img+'"/>');
+    // const exportEL = canvasEyeLevel.toDataURL("image/png");
+    const exportGrid = canvasGrid.toDataURL("image/png");
+    // const exportVp1 = canvasVp1.toDataURL("image/png");
+    // const exportEL = canvasEyeLevel.toDataURL("image/png");
+    // const exportEL = canvasEyeLevel.toDataURL("image/png");
+    var w=window.open('about:blank','image from canvas');
+    w.document.write('<img src="' + exportGrid + '"/>');
 }

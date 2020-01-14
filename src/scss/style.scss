@@ -67,9 +67,6 @@ Canvas
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-color: #ddd;
-}
-#canvas-eye-level{
     background-color: #fff;
 }
 canvas{
@@ -88,7 +85,7 @@ form{
     font-weight: bold;
     color: #555;
 }
-input[onclick="generate_pers();"]{
+#generate-image-button{
     width: 300px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -99,7 +96,7 @@ input[onclick="generate_pers();"]{
     border:none;
     margin-right: 20px;
 }
-input[onclick="clear_canvas();"],input[onclick="export_img();"],input[onclick="undo();"]{
+#clear-all-button{
     width:150px;
     border: none;
     background-color: #888;
