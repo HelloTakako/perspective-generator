@@ -25,14 +25,11 @@ body{
     font-family: "Lato", san-serif;
     font-size: 1.6rem;
     line-height: 1.5;
-    width: 100vw;
+    width: 100vw; 
 }
 main{
-    background-color: #fff;
-    padding: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
+    text-align: left;
+    margin: 3vw;
 }
 h1{
     font-size: 1.8rem;
@@ -133,4 +130,12 @@ input[type="button"]:active,input[type="button"]:hover{
 }
 input[disabled]{
     opacity:0.5;
+}
+
+/*---------------------
+video Scene
+---------------------*/
+#videoScene{
+    width: 100vw;
+    height: 100vh;
 }
