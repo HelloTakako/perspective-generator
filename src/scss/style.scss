@@ -72,10 +72,7 @@ canvas{
     position: absolute;
 }
 
-// hide canvas for exporting
-canvas#canvasToExport{
-    display: none;
-}
+
 
 /*---------------------
 Canvas Settings
@@ -135,7 +132,18 @@ input[disabled]{
 /*---------------------
 video Scene
 ---------------------*/
+#displayOnCamera{
+    position: relative;
+}
+canvas#canvasToExport{
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    z-index: 2;
+}
 #videoScene{
     width: 100vw;
     height: 100vh;
+    position: absolute;
+    z-index: 1;
 }

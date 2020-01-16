@@ -286,6 +286,6 @@ function export_img(){
 
     const ExportedCanvas = canvasToExport.toDataURL("image/png");
 
-    const w = window.open('about:blank','image from canvas');
-    w.document.write('<img src="' + ExportedCanvas + '"/>');
+    // const w = window.open('about:blank','image from canvas');
+    // w.document.write('<img src="' + ExportedCanvas + '"/>');
 }

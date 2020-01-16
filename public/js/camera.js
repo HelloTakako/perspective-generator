@@ -22,3 +22,8 @@ function openCamera() {
             console.log(err);
         });
 }
+
+// function stopCamera() {
+//     var video = document.querySelector('video');
+//     video.pause();
+// }
