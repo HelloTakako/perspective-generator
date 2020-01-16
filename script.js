@@ -138,17 +138,17 @@ const drawVP = function(ctx, vpEach,eyeLevel){
     }
 };
 
-vp1.addEventListener("click", function(){
+vp1.addEventListener("change", function(){
     intVp1.value = vp1.value;
     drawVP(ctxVp1, vp1, eyeLevel);
 });
 
-vp2.addEventListener("click", function(){
+vp2.addEventListener("change", function(){
     intVp2.value = vp2.value;
     drawVP(ctxVp2, vp2, eyeLevel);
 });
 
-vp3.addEventListener("click", function(){
+vp3.addEventListener("change", function(){
     intVp3.value = vp3.value;
     const vp = vp3.value;
     const cwCenter = canvasEyeLevel.width / 2;
