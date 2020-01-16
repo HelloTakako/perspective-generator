@@ -1,8 +1,8 @@
 {
   "name": "Perspective Generator",
   "short_name": "Perspective Gen.",
-  "display": "minimal-ui",
-  "start_url": "/",
+  "display": "standalone",
+  "start_url": "index.html",
   "theme_color": "#673ab6",
   "background_color": "#111111",
   "icons": [

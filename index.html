@@ -5,10 +5,12 @@
     <title>Perspective Generator</title>
     <link rel="stylesheet" href="./public/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="./public/images/icon-192.png" sizes="192x192">
+    <script src="./public/js/camera.js"></script>
     <script src="./site.js"></script>
 </head>
-<body>
+<button>
     <header>
         <ul>
             <li><a href="#">Perspective Gen.</a></li>
@@ -79,6 +81,10 @@
 
     <canvas id="canvasToExport"></canvas>
     </main>
+
+    <button onClick="openCamera();">
+        <video autoplay playsinline></video>
+    </button>
 <script src="./script.js"></script>
 </body>
 </html>
