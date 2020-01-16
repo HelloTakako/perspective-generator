@@ -5,7 +5,7 @@ Canvas and the settings
 const canvasEyeLevel = document.getElementById('canvas-eye-level');
 const ctxEL = canvasEyeLevel.getContext('2d');
 const canvasGrid = document.getElementById('canvas-grid');
-const ctxGrid = canvasEyeLevel.getContext('2d');
+const ctxGrid = canvasGrid.getContext('2d');
 const canvasVp1 = document.getElementById('canvas-vp1');
 const ctxVp1 = canvasVp1.getContext('2d');
 const canvasVp2 = document.getElementById('canvas-vp2');
@@ -269,13 +269,23 @@ clearAllButton.addEventListener("click", function(){
 })
 
 // export as PNG
+const canvasToExport = document.getElementById("canvasToExport");
+const ctxCanvasToExport = canvasToExport.getContext('2d');
+
 
 function export_img(){
-    // const exportEL = canvasEyeLevel.toDataURL("image/png");
-    const exportGrid = canvasGrid.toDataURL("image/png");
-    // const exportVp1 = canvasVp1.toDataURL("image/png");
-    // const exportEL = canvasEyeLevel.toDataURL("image/png");
-    // const exportEL = canvasEyeLevel.toDataURL("image/png");
-    var w=window.open('about:blank','image from canvas');
-    w.document.write('<img src="' + exportGrid + '"/>');
+    clearCanvas(canvasToExport, ctxCanvasToExport);
+    canvasToExport.width = canvasEyeLevel.width;
+    canvasToExport.height = canvasEyeLevel.height;
+
+    ctxCanvasToExport.drawImage(canvasEyeLevel,0,0);
+    ctxCanvasToExport.drawImage(canvasGrid,0,0);
+    ctxCanvasToExport.drawImage(canvasVp1,0,0);
+    ctxCanvasToExport.drawImage(canvasVp2,0,0);
+    ctxCanvasToExport.drawImage(canvasVp3,0,0);
+
+    const ExportedCanvas = canvasToExport.toDataURL("image/png");
+
+    const w = window.open('about:blank','image from canvas');
+    w.document.write('<img src="' + ExportedCanvas + '"/>');
 }
