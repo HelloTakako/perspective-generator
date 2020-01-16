@@ -75,6 +75,11 @@ canvas{
     position: absolute;
 }
 
+// hide canvas for exporting
+canvas#canvasToExport{
+    display: none;
+}
+
 /*---------------------
 Canvas Settings
 ---------------------*/
