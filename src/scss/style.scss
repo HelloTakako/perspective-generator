@@ -135,16 +135,17 @@ video Scene
 #displayOnCamera{
     position: relative;
 }
-canvas#canvasToExport{
-    position: absolute;
-    width:100vw;
-    height: 100vh;
-    z-index: 2;
-    opacity: 0.7;
-}
+canvas#canvasToExport,
 #videoScene{
     width: 100vw;
     height: 100vh;
     position: absolute;
+    margin: 0;
+}
+canvas#canvasToExport{
+    z-index: 2;
+    opacity: 0.7;
+}
+#videoScene{
     z-index: 1;
 }
