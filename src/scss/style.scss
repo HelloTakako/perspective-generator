@@ -29,7 +29,7 @@ body{
 }
 main{
     text-align: left;
-    margin: 3vw;
+    padding: 3vw;
 }
 h1{
     font-size: 1.8rem;
@@ -64,12 +64,14 @@ Canvas
     align-items: center;
     background-color: #fff;
     height: 300px;
+    
+    margin: 30px 0;
 }
 canvas{
     background-color: transparent;
-    margin: 20px auto;
-    border:1px solid #ddd;
     position: absolute;
+    border:1px solid #ddd;
+    box-sizing: border-box;
 }
 
 
