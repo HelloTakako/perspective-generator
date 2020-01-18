@@ -28,12 +28,12 @@ const vertical = document.getElementById("vertical");
 const horizontal = document.getElementById("horizontal");
 
 function canvasVertical(canvas){
-    canvas.width = 180;
-    canvas.height = 320;
+    canvas.width = window.innerWidth / 3;
+    canvas.height = window.innerHeight / 3;
 }
 function canvasHorizontal(canvas){
-    canvas.width = 320;
-    canvas.height = 180;
+    canvas.width = window.innerHeight / 3;
+    canvas.height = window.innerWidth / 3;
 }
 
 vertical.addEventListener("change", function(){
@@ -284,7 +284,7 @@ function export_img(){
     ctxCanvasToExport.drawImage(canvasVp2,0,0);
     ctxCanvasToExport.drawImage(canvasVp3,0,0);
 
-    const ExportedCanvas = canvasToExport.toDataURL("image/png");
+    // const ExportedCanvas = canvasToExport.toDataURL("image/png");
 
     // const w = window.open('about:blank','image from canvas');
     // w.document.write('<img src="' + ExportedCanvas + '"/>');
