@@ -38,16 +38,16 @@ const horizontal = document.getElementById('horizontal');
  * @param {string} canvas - canvas object *
  */
 function canvasVertical(canvas) {
-  canvas.width = window.innerWidth / 3;
-  canvas.height = window.innerHeight / 3;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
 
 /**
  * @param {string} canvas - canvas object *
  */
 function canvasHorizontal(canvas) {
-  canvas.width = window.innerHeight / 3;
-  canvas.height = window.innerWidth / 3;
+  canvas.width = window.innerHeight;
+  canvas.height = window.innerWidth;
 }
 
 vertical.addEventListener('change', function() {

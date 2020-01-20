@@ -11,14 +11,6 @@
     <script src="./site.js"></script>
 </head>
     <main id="slide-menu">
-
-    <div class="canvas-preview" id="canvas-preview">
-        <canvas id="canvas-grid">Your browser does not support Canvas.</canvas>
-        <canvas id="canvas-vp1">Your browser does not support Canvas.</canvas>
-        <canvas id="canvas-vp2">Your browser does not support Canvas.</canvas>
-        <canvas id="canvas-vp3">Your browser does not support Canvas.</canvas>
-        <canvas id="canvas-eye-level">Your browser does not support Canvas.</canvas>
-    </div>
     
         <form id="input_area">
             <fieldset id="orientation">
@@ -70,6 +62,14 @@
     <button id="openCamera" onClick="openCamera();">Open Camera</button>
 <!-- Close video -->
     <!-- <button onClick="closeCamera();">Close Camera</button> -->
+
+<div class="canvas-preview" id="canvas-preview">
+    <canvas id="canvas-grid">Your browser does not support Canvas.</canvas>
+    <canvas id="canvas-vp1">Your browser does not support Canvas.</canvas>
+    <canvas id="canvas-vp2">Your browser does not support Canvas.</canvas>
+    <canvas id="canvas-vp3">Your browser does not support Canvas.</canvas>
+    <canvas id="canvas-eye-level">Your browser does not support Canvas.</canvas>
+</div>
 
 <div id="displayOnCamera">
     <video autoplay playsinline id="videoScene"></video>
