@@ -6,16 +6,13 @@ Slide menu & menu toggle button
 const menuButton = document.getElementById("menu-toggle-button");
 const menu = document.getElementById("slide-menu");
 
-let isMenuHidden;
+
 
 menuButton.addEventListener("click",function(){
-    if(!isMenuHidden){
-        menu.classList.add("menu-hidden");
-        isMenuHidden = true;
-    }
-    if(isMenuHidden){
+    if([...menu.classList].includes("menu-hidden")){
         menu.classList.remove("menu-hidden");
-        isMenuHidden = false;
+    } else{
+        menu.classList.add("menu-hidden");
     }
 })
 

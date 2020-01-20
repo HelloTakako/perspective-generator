@@ -28,7 +28,6 @@ body{
     width: 100vw; 
 }
 
-
 /*---------------------
 Canvas
 ---------------------*/
@@ -68,18 +67,21 @@ div#menu-toggle-button {
 }
 
 .menu-hidden{
-    display: none;
+    display: none !important;
+    bottom: -200px;
 }
 
 #slide-menu{
+    overflow: hidden;
     text-align: left;
-    padding: 3vw;
+    padding: 20px;
     position: fixed;
     bottom: 0;
     display: flex;
     z-index: 10;
     background-color: rgba(255,255,255,.6);
     display: block;
+    transition: 1.5s;
 }
 
 /*---------------------
