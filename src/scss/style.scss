@@ -65,8 +65,7 @@ form{
     font-weight: bold;
     color: #555;
 }
-#generate-image-button{
-    width: 300px;
+#openCamera{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -76,8 +75,7 @@ form{
     border:none;
     margin-right: 20px;
 }
-#clear-all-button, #openCamera{
-    width:150px;
+#clear-all-button{
     border: none;
     background-color: #888;
     color: #fff;

@@ -11,6 +11,9 @@
     <script src="./site.js"></script>
 </head>
     <main id="slide-menu">
+
+        <!-- Open Camera View -->
+        <button id="openCamera" onClick="openCamera();">Open Camera</button>
     
         <form id="input_area">
             <fieldset id="orientation">
@@ -51,17 +54,11 @@
             </fieldset>
 
             <fieldset>
-                <input type="button" onclick="export_img();" value="Generate" id="generate-image-button">
                 <input type="button" id="clear-all-button" value="Clear All">
             </fieldset>
-
         </form>
-    </main>
 
-<!-- Move to video -->
-    <button id="openCamera" onClick="openCamera();">Open Camera</button>
-<!-- Close video -->
-    <!-- <button onClick="closeCamera();">Close Camera</button> -->
+    </main>
 
 <div class="canvas-preview" id="canvas-preview">
     <canvas id="canvas-grid">Your browser does not support Canvas.</canvas>
@@ -73,7 +70,7 @@
 
 <div id="displayOnCamera">
     <video autoplay playsinline id="videoScene"></video>
-    <canvas id="canvasToExport"></canvas>
+    <!-- <canvas id="canvasToExport"></canvas> -->
 </div>
 
     

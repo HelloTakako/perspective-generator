@@ -269,32 +269,32 @@ clearAllButton.addEventListener('click', function() {
 });
 
 // export as PNG
-const canvasToExport = document.getElementById('canvasToExport');
-const ctxCanvasToExport = canvasToExport.getContext('2d');
+// const canvasToExport = document.getElementById('canvasToExport');
+// const ctxCanvasToExport = canvasToExport.getContext('2d');
 
 
-function export_img() {
-  clearCanvas(canvasToExport, ctxCanvasToExport);
+// function export_img() {
+//   clearCanvas(canvasToExport, ctxCanvasToExport);
 
-  if(horizontal.checked){
-    canvasToExport.width = canvasEyeLevel.width;
-    canvasToExport.height = canvasEyeLevel.height;
+//   if(horizontal.checked){
+//     canvasToExport.width = canvasEyeLevel.width;
+//     canvasToExport.height = canvasEyeLevel.height;
 
-    ctxCanvasToExport.rotate(90*(Math.PI/180));
-    ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
-    ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
-    ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
-    ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
-    ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
-  }
-  if(vertical.checked){
-    canvasToExport.width = canvasEyeLevel.width;
-    canvasToExport.height = canvasEyeLevel.height;
+//     ctxCanvasToExport.rotate(90*(Math.PI/180));
+//     ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
+//   }
+//   if(vertical.checked){
+//     canvasToExport.width = canvasEyeLevel.width;
+//     canvasToExport.height = canvasEyeLevel.height;
 
-    ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
-    ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
-    ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
-    ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
-    ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
-  }
-}
+//     ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
+//     ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
+//   }
+// }
