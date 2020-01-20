@@ -27,11 +27,14 @@ body{
     line-height: 1.5;
     width: 100vw; 
 }
-main{
+#slide-menu{
     text-align: left;
     padding: 3vw;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
+    display: flex;
     z-index: 10;
+    background-color: rgba(255,255,255,.6);
 }
 
 /*---------------------
@@ -64,6 +67,12 @@ form{
     line-height: 2;
     font-weight: bold;
     color: #555;
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="text"] {
+    width: 50px;
+    font-size: 1.8rem;
 }
 #openCamera{
     -webkit-border-radius: 10px;

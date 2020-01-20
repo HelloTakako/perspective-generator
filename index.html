@@ -10,54 +10,58 @@
     <script src="./public/js/camera.js"></script>
     <script src="./site.js"></script>
 </head>
-    <main id="slide-menu">
+    <main>
+        <div id="menu-toggle-button">&#9998;</div>
+        <div id="slide-menu">
 
-        <!-- Open Camera View -->
-        <button id="openCamera" onClick="openCamera();">Open Camera</button>
-    
-        <form id="input_area">
-            <fieldset id="orientation">
-                <input type="radio" name="orientation" value="horizontal" id="horizontal" checked>Horizontal
-                <input type="radio" name="orientation" value="vertical" id="vertical">Vertical<br/>
-            </fieldset>
-
-            <fieldset>
-                <input type="radio" name="points" value="point1" id="vp1-select" checked>1-point perspective
-                <input type="radio" name="points" value="point2" id="vp2-select">2-point perspective
-                <input type="radio" name="points" value="point3" id="vp3-select">3-point perspective
-            </fieldset>
-
-            <fieldset>
-                <label for="eyeLevel">Eye Level</label>
-                <input type="range" min="0" max="100" value="50" id="eyeLevel">
-                <input type="text" name="eyeLevel-int" id="eyeLevel-int" value="50">
-            </fieldset>
-
-            <fieldset>
-                <label for="vp1">Vanishing Point 1</label>
-                <input type="range" min="-1500" max="1500" value="50" id="vp1">
-                <input type="text" name="vp1-int" id="vp1-int" value="50">
-                <br/>
-                <label for="vp2">Vanishing Point 2</label>
-                <input type="range" min="-1500" max="1500" value="50" id="vp2" disabled>
-                <input type="text" name="vp2-int" id="vp2-int" value ="50">
-                <br/>
-                <label for="vp3">Vanishing Point 3</label>
-                <input type="range" min="-1500" max="1500" value="-100" id="vp3" disabled>
-                <input type="text" name="vp3-int" id="vp3-int" value="-100">
-            </fieldset>
-
-            <fieldset id="grid">
-                <label for="grid">Grid</label>
-                <input type="radio" name="grid" value="grid-on" id="grid-on">On
-                <input type="radio" name="grid" value="grid-off" id="grid-off" checked>Off<br/>
-            </fieldset>
+            <!-- Open Camera View -->
+            <button id="openCamera" onClick="openCamera();">Open Camera</button>
 
             <fieldset>
                 <input type="button" id="clear-all-button" value="Clear All">
             </fieldset>
-        </form>
+        
+            <form id="input_area">
+                <fieldset id="orientation">
+                    <input type="radio" name="orientation" value="horizontal" id="horizontal" checked>Horizontal
+                    <input type="radio" name="orientation" value="vertical" id="vertical">Vertical<br/>
+                </fieldset>
 
+                <fieldset>
+                    <input type="radio" name="points" value="point1" id="vp1-select" checked>1-point perspective
+                    <input type="radio" name="points" value="point2" id="vp2-select">2-point perspective
+                    <input type="radio" name="points" value="point3" id="vp3-select">3-point perspective
+                </fieldset>
+
+                <fieldset>
+                    <label for="eyeLevel">Eye Level</label>
+                    <input type="range" min="0" max="100" value="50" id="eyeLevel">
+                    <input type="text" name="eyeLevel-int" id="eyeLevel-int" value="50">
+                </fieldset>
+
+                <fieldset>
+                    <label for="vp1">Vanishing Point 1</label>
+                    <input type="range" min="-1500" max="1500" value="50" id="vp1">
+                    <input type="text" name="vp1-int" id="vp1-int" value="50">
+                    <br/>
+                    <label for="vp2">Vanishing Point 2</label>
+                    <input type="range" min="-1500" max="1500" value="50" id="vp2" disabled>
+                    <input type="text" name="vp2-int" id="vp2-int" value ="50">
+                    <br/>
+                    <label for="vp3">Vanishing Point 3</label>
+                    <input type="range" min="-1500" max="1500" value="-100" id="vp3" disabled>
+                    <input type="text" name="vp3-int" id="vp3-int" value="-100">
+                </fieldset>
+
+                <fieldset id="grid">
+                    <label for="grid">Grid</label>
+                    <input type="radio" name="grid" value="grid-on" id="grid-on">On
+                    <input type="radio" name="grid" value="grid-off" id="grid-off" checked>Off<br/>
+                </fieldset>
+
+            </form>
+
+        </div>
     </main>
 
 <div class="canvas-preview" id="canvas-preview">
