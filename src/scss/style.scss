@@ -30,6 +30,8 @@ body{
 main{
     text-align: left;
     padding: 3vw;
+    position: absolute;
+    z-index: 10;
 }
 h1{
     font-size: 1.8rem;

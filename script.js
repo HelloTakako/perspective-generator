@@ -1,6 +1,12 @@
 'use strict';
 
 /* ------------------------------
+Slide Menu
+------------------------------*/
+const menu = document.getElementById("slide-menu");
+
+
+/* ------------------------------
 Canvas and the settings
 ------------------------------*/
 
@@ -77,14 +83,6 @@ eyeLevel.addEventListener('change', function() {
   ctxEL.stroke();
 });
 
-// ------------------------
-// Number of perspective lines
-
-const numOfLines = document.getElementById('numOfLines');
-// get numbers of lines
-numOfLines.addEventListener('click', function() {
-  intNoL.value = numOfLines.value;
-});
 
 // ------------------------
 // Vanishing points
@@ -224,7 +222,7 @@ vp3.addEventListener('change', function() {
 
 // grids
 function drawGrid(canvas, ctx) {
-  for (x=20; x < canvas.width; x += 20) {
+  for (let x=20; x < canvas.width; x += 20) {
     ctx.beginPath();
     ctx.moveTo(x, 0);
     ctx.lineTo(x, canvas.width);
@@ -233,7 +231,7 @@ function drawGrid(canvas, ctx) {
     ctx.stroke();
   }
 
-  for (y=20; y < canvas.height; y += 20) {
+  for (let y=20; y < canvas.height; y += 20) {
     ctx.beginPath();
     ctx.moveTo(0, y);
     ctx.lineTo(canvas.width, y);
