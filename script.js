@@ -6,9 +6,17 @@ Slide menu & menu toggle button
 const menuButton = document.getElementById("menu-toggle-button");
 const menu = document.getElementById("slide-menu");
 
-let isMenuHidden = false;
+let isMenuHidden;
+
 menuButton.addEventListener("click",function(){
-    isMenuHidden ? menu.classList.add("menu-show") : menu.classList.remove("menu-show"); 
+    if(!isMenuHidden){
+        menu.classList.add("menu-hidden");
+        isMenuHidden = true;
+    }
+    if(isMenuHidden){
+        menu.classList.remove("menu-hidden");
+        isMenuHidden = false;
+    }
 })
 
 
@@ -35,8 +43,9 @@ const intVp3 = document.getElementById('vp3-int');
 const intNoL = document.getElementById('numOfLines-int');
 
 
-// Preview, Vertical or Horizontal
+// Vertical or Horizontal
 
+const canvasPreview = document.getElementById("canvas-preview");
 const vertical = document.getElementById('vertical');
 const horizontal = document.getElementById('horizontal');
 
@@ -44,16 +53,18 @@ const horizontal = document.getElementById('horizontal');
  * @param {string} canvas - canvas object *
  */
 function canvasVertical(canvas) {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+    canvasPreview.classList.remove("rotate-horizontal");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 /**
  * @param {string} canvas - canvas object *
  */
 function canvasHorizontal(canvas) {
-  canvas.width = window.innerHeight;
-  canvas.height = window.innerWidth;
+    canvasPreview.classList.add("rotate-horizontal");
+    canvas.width = window.innerHeight;
+    canvas.height = window.innerWidth;
 }
 
 // canvas size initialize

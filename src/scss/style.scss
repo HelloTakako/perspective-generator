@@ -46,6 +46,10 @@ canvas{
     box-sizing: border-box;
 }
 
+.rotate-horizontal{
+    transform:rotate(270deg);
+}
+
 /*---------------------
 Menu
 ---------------------*/
