@@ -277,17 +277,26 @@ const ctxCanvasToExport = canvasToExport.getContext('2d');
 
 function export_img() {
   clearCanvas(canvasToExport, ctxCanvasToExport);
-  canvasToExport.width = canvasEyeLevel.width;
-  canvasToExport.height = canvasEyeLevel.height;
 
-  ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
-  ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
-  ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
-  ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
-  ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
+  if(horizontal.checked){
+    canvasToExport.width = canvasEyeLevel.width;
+    canvasToExport.height = canvasEyeLevel.height;
 
-  // const ExportedCanvas = canvasToExport.toDataURL("image/png");
+    ctxCanvasToExport.rotate(90*(Math.PI/180));
+    ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
+    ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
+    ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
+    ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
+    ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
+  }
+  if(vertical.checked){
+    canvasToExport.width = canvasEyeLevel.width;
+    canvasToExport.height = canvasEyeLevel.height;
 
-  // const w = window.open('about:blank','image from canvas');
-  // w.document.write('<img src="' + ExportedCanvas + '"/>');
+    ctxCanvasToExport.drawImage(canvasEyeLevel, 0, 0);
+    ctxCanvasToExport.drawImage(canvasGrid, 0, 0);
+    ctxCanvasToExport.drawImage(canvasVp1, 0, 0);
+    ctxCanvasToExport.drawImage(canvasVp2, 0, 0);
+    ctxCanvasToExport.drawImage(canvasVp3, 0, 0);
+  }
 }

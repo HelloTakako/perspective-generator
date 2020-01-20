@@ -63,9 +63,8 @@ Canvas
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    height: 300px;
-    
-    margin: 30px 0;
+    height: 150px;
+    margin: 60px 0 30px;
 }
 canvas{
     background-color: transparent;
@@ -143,7 +142,6 @@ video Scene
 canvas#canvasToExport,
 #videoScene{
     width: 100vw;
-    height: 100vh;
     position: absolute;
     margin: 0;
 }
