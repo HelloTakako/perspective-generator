@@ -45,6 +45,12 @@ const intNoL = document.getElementById('numOfLines-int');
 
 // Vertical or Horizontal
 
+// client's device width, height
+
+const displayWidth = window.innerWidth * window.devicePixelRatio;
+const displayHeight = window.innerHeight * window.devicePixelRatio;
+
+
 const canvasPreview = document.getElementById("canvas-preview");
 const vertical = document.getElementById('vertical');
 const horizontal = document.getElementById('horizontal');
@@ -54,8 +60,8 @@ const horizontal = document.getElementById('horizontal');
  */
 function canvasVertical(canvas) {
     canvasPreview.classList.remove("rotate-horizontal");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = displayWidth;
+    canvas.height = displayHeight;
 }
 
 /**
@@ -63,8 +69,8 @@ function canvasVertical(canvas) {
  */
 function canvasHorizontal(canvas) {
     canvasPreview.classList.add("rotate-horizontal");
-    canvas.width = window.innerHeight;
-    canvas.height = window.innerWidth;
+    canvas.width = displayHeight;
+    canvas.height = displayWidth;
 }
 
 // canvas size initialize
