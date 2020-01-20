@@ -1,9 +1,15 @@
 'use strict';
 
 /* ------------------------------
-Slide Menu
+Slide menu & menu toggle button
 ------------------------------*/
+const menuButton = document.getElementById("menu-toggle-button");
 const menu = document.getElementById("slide-menu");
+
+let isMenuHidden = false;
+menuButton.addEventListener("click",function(){
+    isMenuHidden ? menu.classList.add("menu-show") : menu.classList.remove("menu-show"); 
+})
 
 
 /* ------------------------------
@@ -50,6 +56,14 @@ function canvasHorizontal(canvas) {
   canvas.height = window.innerWidth;
 }
 
+// canvas size initialize
+  canvasHorizontal(canvasEyeLevel);
+  canvasHorizontal(canvasGrid);
+  canvasHorizontal(canvasVp1);
+  canvasHorizontal(canvasVp2);
+  canvasHorizontal(canvasVp3);
+
+// change canvas orientation
 vertical.addEventListener('change', function() {
   canvasVertical(canvasEyeLevel);
   canvasVertical(canvasGrid);

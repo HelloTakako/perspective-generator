@@ -34,12 +34,9 @@ Canvas
 ---------------------*/
 
 .canvas-preview{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // background-color: #fff;
-    // height: 150px;
-    // margin: 60px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     z-index: 3;
 }
@@ -66,6 +63,10 @@ div#menu-toggle-button {
     line-height: 1;
 }
 
+.menu-hidden{
+    display: none;
+}
+
 #slide-menu{
     text-align: left;
     padding: 3vw;
@@ -74,6 +75,7 @@ div#menu-toggle-button {
     display: flex;
     z-index: 10;
     background-color: rgba(255,255,255,.6);
+    display: block;
 }
 
 /*---------------------
