@@ -33,28 +33,6 @@ main{
     position: absolute;
     z-index: 10;
 }
-h1{
-    font-size: 1.8rem;
-    margin: 0 auto -30px;
-    color: #48d54c;
-}
-
-/*---------------------
-Header
----------------------*/
-header{
-    display: none; // temporarily hidden
-    ul{
-        display: flex;
-        li{
-            a{
-                color:"#666";
-                padding: 0 5px;
-            }
-        }
-    }
-}
-
 
 /*---------------------
 Canvas
@@ -97,7 +75,7 @@ form{
     border:none;
     margin-right: 20px;
 }
-#clear-all-button{
+#clear-all-button, #openCamera{
     width:150px;
     border: none;
     background-color: #888;

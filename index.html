@@ -10,14 +10,7 @@
     <script src="./public/js/camera.js"></script>
     <script src="./site.js"></script>
 </head>
-    <header>
-        <ul>
-            <li><a href="#">Perspective Gen.</a></li>
-            <li><a href="search-images.html">Images Search</a></li>
-        </ul>
-    </header>
     <main id="slide-menu">
-        <h1>Perspective Generator</h1>
 
     <div class="canvas-preview" id="canvas-preview">
         <canvas id="canvas-grid">Your browser does not support Canvas.</canvas>
@@ -74,12 +67,11 @@
     </main>
 
 <!-- Move to video -->
-    <button onClick="openCamera();">Open Camera</button>
+    <button id="openCamera" onClick="openCamera();">Open Camera</button>
 <!-- Close video -->
     <!-- <button onClick="closeCamera();">Close Camera</button> -->
 
 <div id="displayOnCamera">
-<!-- <button onClick="openCamera();">Stop Camera</button> -->
     <video autoplay playsinline id="videoScene"></video>
     <canvas id="canvasToExport"></canvas>
 </div>
