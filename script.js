@@ -44,8 +44,8 @@ const intNoL = document.getElementById('numOfLines-int');
 
 // client's device width, height
 
-const displayWidth = window.innerWidth * window.devicePixelRatio;
-const displayHeight = window.innerHeight * window.devicePixelRatio;
+const displayWidth = window.innerWidth;
+const displayHeight = window.innerHeight;
 
 
 const canvasPreview = document.getElementById("canvas-preview");
