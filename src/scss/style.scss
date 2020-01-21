@@ -71,8 +71,7 @@ div#menu-toggle-button {
 }
 
 .menu-hidden{
-    display: none !important;
-    bottom: -200px;
+    transform: translateY(400px);
 }
 
 #slide-menu{
@@ -85,14 +84,13 @@ div#menu-toggle-button {
     z-index: 10;
     background-color: rgba(255,255,255,.6);
     display: block;
-    transition: 1.5s;
+    transition: 0.5s;
 }
 
 /*---------------------
 Canvas Settings
 ---------------------*/
 form{
-    margin:0 auto 30px;
     line-height: 2;
     font-weight: bold;
     color: #555;
