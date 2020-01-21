@@ -69,6 +69,12 @@ div#menu-toggle-button {
     border-radius: 50%;
     line-height: 1;
 }
+.menu-buttons{
+    button {
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+}
 
 .menu-hidden{
     transform: translateY(400px);
@@ -82,7 +88,7 @@ div#menu-toggle-button {
     bottom: 0;
     display: flex;
     z-index: 10;
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(0,0,0,.8);
     display: block;
     transition: 0.5s;
 }
@@ -92,8 +98,7 @@ Canvas Settings
 ---------------------*/
 form{
     line-height: 2;
-    font-weight: bold;
-    color: #555;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
 }
@@ -113,17 +118,17 @@ input[type="text"] {
 }
 #clear-all-button{
     border: none;
-    background-color: #888;
-    color: #fff;
+    background-color: #bbb;
+    color: #222;
     border-radius: 10px;
     padding: 10px;
-    font-size: 0.8em;
 }
 
 // inputs
 
 input {
   user-select: initial;
+  margin-top: 10px;
 }
 
 input[type="button"]:active,input[type="button"]:hover{
