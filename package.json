@@ -1,0 +1,32 @@
+{
+  "name": "perspective",
+  "version": "1.0.0",
+  "description": "https://hellotakako.github.io/perspective/",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloTakako/perspective.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelloTakako/perspective/issues"
+  },
+  "homepage": "https://github.com/HelloTakako/perspective#readme",
+  "dependencies": {
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

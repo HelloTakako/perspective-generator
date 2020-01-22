@@ -1,0 +1,163 @@
+@import "./reset.scss";
+
+/*---------------------
+Fonts
+---------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/*---------------------
+General
+---------------------*/
+*{
+margin:0;
+padding:0;
+}
+ul li{
+    list-style: none;
+}
+img{
+    vertical-align: bottom;
+}
+html{
+    font-size:62.5%;
+}
+body{
+    font-family: "Lato", san-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    width: 100vw; 
+}
+
+/*---------------------
+Canvas
+---------------------*/
+
+.canvas-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;  
+    z-index: 3;
+}
+canvas{
+    background-color: transparent;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.rotate-horizontal{
+    transform:rotate(90deg) translateY(-100vw);
+}
+
+/*---------------------
+Menu
+---------------------*/
+div#menu-toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    z-index: 40;
+    font-size: 4rem;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1;
+}
+.menu-buttons{
+    button {
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+}
+
+.menu-hidden{
+    transform: translateY(400px);
+}
+
+#slide-menu{
+    overflow: hidden;
+    text-align: left;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    z-index: 10;
+    background-color: rgba(0,0,0,.8);
+    display: block;
+    transition: 0.5s;
+}
+
+/*---------------------
+Canvas Settings
+---------------------*/
+form{
+    line-height: 2;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="text"] {
+    width: 50px;
+    font-size: 1.8rem;
+}
+#openCamera{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #ff8128;
+    color:#fff;
+    padding:10px;
+    border:none;
+    margin-right: 20px;
+}
+#clear-all-button{
+    border: none;
+    background-color: #bbb;
+    color: #222;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+// inputs
+
+input {
+  user-select: initial;
+  margin-top: 10px;
+}
+
+input[type="button"]:active,input[type="button"]:hover{
+    opacity: 0.7;
+    cursor:pointer;
+}
+input[disabled]{
+    opacity:0.5;
+}
+
+/*---------------------
+video Scene
+---------------------*/
+#displayOnCamera{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+canvas#canvasToExport,
+#videoScene{
+    width: 100vw;
+    position: absolute;
+    margin: 0;
+}
+canvas#canvasToExport{
+    z-index: 2;
+    opacity: 0.7;
+}
+#videoScene{
+    z-index: 1;
+}
