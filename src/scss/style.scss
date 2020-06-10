@@ -82,15 +82,16 @@ div#menu-toggle-button {
 
 #slide-menu{
     overflow: hidden;
-    text-align: left;
     padding: 20px;
     position: fixed;
     bottom: 0;
     display: flex;
     z-index: 10;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.6);
     display: block;
     transition: 0.5s;
+    width: 100vw;
+    text-align: center;
 }
 
 /*---------------------
@@ -99,9 +100,13 @@ Canvas Settings
 form{
     line-height: 2;
     color: #fff;
-    display: flex;
-    flex-wrap: wrap;
 }
+fieldset{
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px dotted #aaa;
+}
+
 input[type="text"] {
     width: 50px;
     font-size: 1.8rem;
@@ -128,7 +133,8 @@ input[type="text"] {
 
 input {
   user-select: initial;
-  margin-top: 10px;
+  display: inline-block;
+  margin-top:10px;
 }
 
 input[type="button"]:active,input[type="button"]:hover{
@@ -146,7 +152,7 @@ video Scene
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    // overflow: hidden;
 }
 canvas#canvasToExport,
 #videoScene{
